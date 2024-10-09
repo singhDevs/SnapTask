@@ -140,7 +140,7 @@ fun UpdateTaskScreen(
         }
     }
 
-    Column(Modifier.fillMaxSize()) {
+    Column(Modifier.fillMaxSize().padding(horizontal = 6.dp)) {
         //Cancel & Save buttons
         Row(
             modifier = Modifier

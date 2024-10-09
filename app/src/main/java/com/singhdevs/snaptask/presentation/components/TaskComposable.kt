@@ -38,15 +38,16 @@ fun TaskComposable(
     val snapTaskColors = LocalSnapTaskColors.current
 
     Card(
-        modifier = modifier.border(
-            width = 2.dp,
-            color = when (task.status) {
-                TaskStatus.COMPLETED -> snapTaskColors.greenTaskCardBorder
-                TaskStatus.IN_PROGRESS -> snapTaskColors.yellowTaskCardBorder
-                else -> snapTaskColors.grayTaskCardBorder
-            },
-            RoundedCornerShape(cardCornerRadius)
-        ),
+        modifier = modifier
+            .border(
+                width = 2.dp,
+                color = when (task.status) {
+                    TaskStatus.COMPLETED -> snapTaskColors.greenTaskCardBorder
+                    TaskStatus.IN_PROGRESS -> snapTaskColors.yellowTaskCardBorder
+                    else -> snapTaskColors.grayTaskCardBorder
+                },
+                RoundedCornerShape(cardCornerRadius)
+            ),
         border = CardDefaults.outlinedCardBorder(),
         colors = CardDefaults.cardColors(
             containerColor =
@@ -85,6 +86,7 @@ fun TaskComposable(
             Icons.Filled.Delete,
             contentDescription = "delete_task",
             modifier = Modifier
+                .padding(10.dp)
                 .align(Alignment.End)
                 .clickable {
                     onDelete()

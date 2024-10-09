@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.singhdevs.snaptask.domain.model.TaskStatus
 import com.singhdevs.snaptask.ui.theme.LocalSnapTaskColors
 
@@ -34,6 +35,7 @@ fun StatusChip(
     ) {
         Text(
             text = status.name,
+            fontSize = 14.sp,
             modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
             color = snapTaskColors.chipText,
             fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal
